@@ -59,7 +59,7 @@ switch(menu){
         
         }
 
-    } while(menu!=6);
+    } while(menu!=7);
 } 
 Menu();
 
