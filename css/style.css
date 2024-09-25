@@ -1,0 +1,109 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    height: 300px;
+
+
+
+}
+
+.card img{
+    object-fit: cover;
+    width: 100%;
+    height: 150px;
+
+}
+
+.cuadros{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.carro{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin: 60px;
+
+}
+
+.carritox{
+    border: 2px solid #0e2844; 
+    border-radius: 10px;    
+    padding: 20px;          
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    background-color: #fff; 
+
+
+
+}
+
+
+
+.agregar-productos:hover{
+    background-image: linear-gradient(to right, #ffb200, #ffda4e);
+    
+}
+
+.agregar-productos{
+    border: none; 
+    color: white; 
+    padding: 14px 28px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    display: inline-block;
+    margin: 5px;
+    background-image: linear-gradient(to right, #ffc107, #ffda4e);
+}
+
+#vaciarCarrito{
+    border: none; 
+    color: white; 
+    padding: 14px 28px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    display: inline-block;
+    margin: 5px;
+    background-image: linear-gradient(to right, #dc3545, #e0666e);
+}
+
+#vaciarCarrito:hover{
+    background-image: linear-gradient(to right, #a11e2b, #ac4d53);
+}
+
+
+#comprar{
+    border: none; 
+    color: white; 
+    padding: 14px 28px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    display: inline-block;
+    margin: 5px;
+    background-color: #78bb59;
+}
+
+
+#comprar:hover{
+    background-color: #59973c;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+}
+
+
+#barra{
+display: flex!important;
+justify-content: center!important;
+}
+
+
+
+/* !!Swipper */
+
