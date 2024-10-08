@@ -15,7 +15,7 @@ const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 const productos = [
     {   id: "1", 
         nombre: "Smartphone", 
-        imagen:"../img/samsung-galaxy-s23-ultra-512-gb-5g-phantom-black.jpg" ,
+        imagen:"./img/samsung-galaxy-s23-ultra-512-gb-5g-phantom-black.jpg" ,
         descripcion:"Samsung Galaxy S23 Ultra." ,
         precio: 999.99,
         cantidad:1 },
