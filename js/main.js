@@ -1,168 +1,4 @@
 
-
-// let PreguntaHistoria = [
-//     { pregunta:"¿En que año se descubrio america?" , respuesta: 1492},
-//     { pregunta:"¿En qué año se produjo la Revolución Francesa?", respuesta: 1789 },
-//     { pregunta:"¿Cuando empezó la Primera Guerra Mundial?", respuesta: 1914 },
-//     { pregunta:"¿En qué país se usó la primera bomba atómica?", respuesta: "japon"}
-//     ];
-
-
-// let puntaje=0;
-
-// let usuarios=
-//     {
-//     nombre: prompt("Ingrese su nombre"),
-//     apellido: prompt("Ingrese su apellido"),
-//     edad: parseInt(prompt("Ingrese su edad")),
-//     puntaje: puntaje
-// }
-
-
-// alert("Hola " + usuarios.nombre + " " + usuarios.apellido + " ¿Como estas?");
-
-// function Menu (){
-// let menu;
-// do{
-// menu= prompt("Ingresa lo que quieras hacer:\n1: Adivinar Número\n2: Largo de tu palabra\n3: Pregunta de historia \n4:Buscar Pregunta \n5: Ver Puntaje \n6: Cuanto falta para tu cumpleaños \n7: Salir");
-
-
-// switch(menu){
-//     case "1":
-//         AdivinaNumero();
-//         break;
-//     case "2":
-//          PalabraLarga();
-//          break;
-//     case "3":
-//         Preguntas();
-//          break;
-//          case "4":
-//             buscarpregunta();
-//         break;
-//     case "5":
-//         Verpuntaje();
-//         break;   
-//         case "6":
-//             CuantoFaltaCumpleaños();
-//         break;
-//         case "7":
-//             alert("Saliendo del simulador.")
-//         break;
-            
-
-//         default:
-//             alert("Numero de menú no válido");
-//             menu = prompt("Ingrese un valor correcto del menu:\n1: Adivinar Número\n2: Largo de tu palabra\n3: Pregunta de historia \n4:Buscar Pregunta \n5: Ver Puntaje \n6: Cuanto falta para tu cumpleaños \n7: Salir")
-//             Menu(menu);
-//             break;
-        
-//         }
-
-//     } while(menu!=7);
-// } 
-// Menu();
-
-
-
-// function Verpuntaje(){
-//     if(puntaje==0){
-//     alert("Tu puntaje es: 0" );
-//     }
-//     else{
-//         alert("Tu puntaje es: " + puntaje);
-//     }
-    
-// }
-
-
-// function AdivinaNumero(){
-
-//     let numero = Math.floor(Math.random() * 50) + 1;
-//     let dato = parseInt(prompt("Ingrese un numero del 1 al 50:"));
-//     while(dato != numero){
-//         if(dato>numero){
-//             alert("El numero es menor que " + dato);
-//         }
-//         else if(dato<numero){
-//             alert("El numero es mayor que " + dato);
-//         }
-//         dato = parseInt(prompt("Numero equivocado, ingresalo nuevamente"));
-
-//     }
-//     alert("Felicidades, Acertaste el mumero!!, era: " + numero);
-//     puntaje = puntaje + 10;
-//     Verpuntaje();
-
-// }
-
-
-// function PalabraLarga(){
-//     let palabra= prompt("Ingrese una palabra");
-//     alert("La palabra ingresada tiene un largo de " + palabra.length + " caracteres")
-// }
-
-
-
-
-
-
-
-
-// function Preguntas(){
-
-//     for(i=0;i<PreguntaHistoria.length;i++){
-//     let preguntaSelec = PreguntaHistoria[i]
-//     let respuestaSelec= prompt(preguntaSelec.pregunta)
-//     while(respuestaSelec.toLowerCase() != preguntaSelec.respuesta){
-//         alert("Respuesta incorrecta");
-//         puntaje -=2
-//         respuestaSelec = prompt(preguntaSelec.pregunta);
-//     }
-//     alert("Respuesta correcta!!")
-//     puntaje += 10
-//     Verpuntaje();
-//     if(puntaje==40){
-//         alert("Felicidades, alcanzaste la puntuacion máxima!!")
-//     }
-
-
-//     }
-// }
-
-
-
-// function CuantoFaltaCumpleaños(){
-//     let fechahoy = new Date();
-
-//     let mes=prompt("Ingresa tu mes de nacimiento 0=Enero, 11=Diciembre");
-//     let dia=prompt("Ingresa tu dia de nacimiento");
-
-//     let proximocumpleaños = new Date(fechahoy.getFullYear(),mes,dia)
-
-
-//     let CuantoFalta =proximocumpleaños - fechahoy
-    
-//     let diasfaltantes = Math.ceil(CuantoFalta / (86400000));
-
-//     if(proximocumpleaños<fechahoy)
-//         diasfaltantes= (diasfaltantes + 365);
-    
-//     alert("Faltan " + diasfaltantes + " Dias")
-// }
-
-
-
-// function buscarpregunta(){
-// let respuestaingresada = prompt("Ingrese una respuesta para ver si hay una pregunta que la contenga: ")
-// let esta=PreguntaHistoria.find((el) => el.respuesta==respuestaingresada);
-// if (esta) {
-//     alert("Pregunta encontrada: " + esta.pregunta);
-// } else {
-//     alert("No se encontró ninguna pregunta con la respuesta " + respuestaingresada);
-// }
-// }
-
 class Productos{
     constructor(id, nombre, descripcion, precio, cantidad){
         this.id=id;
@@ -179,7 +15,7 @@ const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 const productos = [
     {   id: "1", 
         nombre: "Smartphone", 
-        imagen:"./img/samsung-galaxy-s23-ultra-512-gb-5g-phantom-black.jpg" ,
+        imagen:"../img/samsung-galaxy-s23-ultra-512-gb-5g-phantom-black.jpg" ,
         descripcion:"Samsung Galaxy S23 Ultra." ,
         precio: 999.99,
         cantidad:1 },
@@ -245,6 +81,7 @@ const divProductos = document.querySelector(".cuadros");
 let BotonesAgregar = document.querySelectorAll(".agregar-productos");
 const contador=document.querySelector("#totalProductos");
 const vacio=document.querySelector("#vaciarCarrito");
+const modonegroc=document.querySelector(".botondark");
 
 
 
@@ -254,7 +91,7 @@ function cargarProductos(){
         let div = document.createElement("div");
         div.classList.add("producto");
         div.innerHTML=`
-        <div class="card" style="width: 18rem;">
+        <div class="card modo-dark-card" style="width: 18rem;">
         <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
         <div class="card-body">
           <h5 class="card-title">${producto.nombre}</h5>
@@ -291,55 +128,158 @@ function agregarcarrito(e){
     }else{
         productoA.cantidad=1;
         carrito.push(productoA);
+        
     }
+    agregado();
     actualizarTotal();
-    mostrarProductosEnCarrito();
+    // mostrarProductosEnCarrito();
     localStorage.setItem("carrito", JSON.stringify(carrito));
 }
 
 function actualizarTotal(){
     let contadorH= carrito.reduce((acc, producto)=> acc+ producto.cantidad, 0);
     contador.innerText=contadorH;
-
-
-    let precioTotal = carrito.reduce((acc, producto) => acc + Math.ceil(producto.precio * producto.cantidad), 0);
-    document.getElementById("total").innerText = precioTotal;
-
-}
-
-vacio.addEventListener("click", vaciarCarrito);
-
-function vaciarCarrito() {
-    carrito.length = 0;
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-    mostrarProductosEnCarrito();
-    actualizarTotal();
-}
-
-
-function mostrarProductosEnCarrito() {
-
-    const listaCarrito = document.getElementById("listaCarrito");
-
-    listaCarrito.innerHTML = "";
-
-    if (carrito.length === 0) {
-        listaCarrito.innerHTML = "<p>El carrito está vacío.</p>";
-        return;
+    if(contadorH===0){
+        contador.innerText="";
     }
 
-    carrito.forEach((producto) => {
-        const li = document.createElement("li");
-        li.textContent = `
-        ${producto.nombre} - Precio: $${producto.precio.toFixed(2)} - Cantidad: ${producto.cantidad}
-        `;
-        listaCarrito.append(li);
-    });
+
+
+    // let precioTotal = carrito.reduce((acc, producto) => acc + Math.ceil(producto.precio * producto.cantidad), 0);
+    // document.getElementById("total").innerText = precioTotal;
+
 }
+// vacio.addEventListener("click", icono);
+// vacio.addEventListener("click", vaciarCarrito);
+
+
+// function vaciarCarrito() {
+//     carrito.length = 0;
+//     localStorage.setItem("carrito", JSON.stringify(carrito));
+//     mostrarProductosEnCarrito();
+//     actualizarTotal();
+// }
+
+
+// function mostrarProductosEnCarrito() {
+
+//     const listaCarrito = document.getElementById("listaCarrito");
+
+//     listaCarrito.innerHTML = "";
+
+//     if (carrito.length === 0) {
+//         listaCarrito.innerHTML = "<p>El carrito está vacío.</p>";
+//         return;
+//     }
+
+//     carrito.forEach((producto) => {
+//         const li = document.createElement("li");
+//         li.textContent = `
+//         ${producto.nombre} - Precio: $${producto.precio.toFixed(2)} - Cantidad: ${producto.cantidad}
+//         `;
+//         listaCarrito.append(li);
+//     });
+// }
 
 window.onload = function() {
-    mostrarProductosEnCarrito();
     actualizarTotal();
 };
 
+modonegroc.addEventListener("click", modonegro );
 
+let botondark = document.querySelector(".botondark");
+let cards = document.querySelectorAll(".card");
+const navbar = document.querySelector(".navbar");
+const iconoCarrito = document.querySelector(".modo-dark-carrito");
+const canvas=document.querySelector("#offcanvasNavbar");
+const canvasTi=document.querySelector(".offcanvas-title");
+
+function modonegro() {
+    if (document.body.classList.contains("modoDark")) {
+        document.body.classList.remove("modoDark");
+
+        if(navbar.classList.contains("navbar-dark")){
+            navbar.classList.remove("navbar-dark");
+        }
+        if(navbar.classList.contains("bg-dark")){
+            navbar.classList.remove("bg-dark");
+        }
+        if (iconoCarrito) {
+            iconoCarrito.setAttribute("fill", "dark");
+        }
+
+        if(canvas.classList.contains("bg-dark")){
+            canvas.classList.remove("bg-dark");
+        }
+        if(canvasTi.classList.contains("text-white")){
+            canvasTi.classList.remove("text-white");
+        }
+        
+
+        const cards = document.querySelectorAll(".card");
+        cards.forEach(card => {
+            card.classList.remove("modo-dark-card");
+        });
+
+        botondark.innerHTML=`
+        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-brightness-high" viewBox="0 0 16 16">
+  <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
+</svg>
+        `
+    } else {
+        document.body.classList.add("modoDark");
+        navbar.classList.add("navbar-dark");
+        navbar.classList.add("bg-dark");
+        if (iconoCarrito) {
+            iconoCarrito.setAttribute("fill", "white"); 
+        }
+        canvas.classList.add("bg-dark");
+        canvasTi.classList.add("text-white");
+        
+
+        const cards = document.querySelectorAll(".card");
+        cards.forEach(card => {
+            card.classList.add("modo-dark-card");
+        });
+
+        botondark.innerHTML=`
+        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-moon" viewBox="0 0 16 16">
+        <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286"/>
+      </svg>
+      `
+    }
+}
+
+function icono() {
+    if(carrito.length === 0){
+        Swal.fire({
+            title: "El carrito ya esta vacio",
+            text: "",
+            icon: "info"
+          });
+    }else{
+Swal.fire({
+    title: "Carrito Vacío",
+    text: "El carrito esta vacío",
+    icon: "success"
+  });
+
+}
+}
+
+
+
+
+function agregado(){
+Toastify({
+    text: "Producto Agregado",
+    duration: 3000,
+    close: true,
+    gravity: "bottom",
+    position: "left",
+    style:{
+        backgroundColor: "#6be65a", 
+    },
+    
+    }).showToast();
+}
