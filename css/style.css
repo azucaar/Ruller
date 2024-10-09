@@ -406,3 +406,26 @@ background-color: black;
         margin: 40px;
         background-image: linear-gradient(to right, #007bff, #4ab2e2);
 }
+
+
+.vacio{
+    color: rgb(0, 0, 0);
+}
+
+.vacioN{
+    color: rgb(255, 254, 254)
+}
+
+.formu{
+    margin: 200px;
+    
+}
+
+.confirm{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    margin-top: 80px;
+}

@@ -37,7 +37,7 @@ function mostrarProductosEnCarrito() {
 
     if (carrito.length === 0) {
         listaCarrito.innerHTML = `
-        <p>El carrito está vacío.</p>
+        <p class="vacio vacioN">El carrito está vacío.</p>
         <a href="../index.html" class="volver-comprar">
             <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-backspace-fill' viewBox='0 0 16 16'>
                 <path d='M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 2 0 0 0 2-2zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8z'/>
@@ -230,6 +230,7 @@ const canvasTi=document.querySelector(".offcanvas-title");
 const contenedorCarrito=document.querySelector(".carrito");
 const contenedorInd=document.querySelector(".productosIndv");
 const CostoTotal=document.querySelector(".total");
+const carritoVacio=document.querySelector(".vacio")
 
 
 function modonegro() {
@@ -239,10 +240,17 @@ function modonegro() {
         if(titulo.classList.contains("negro")){
             titulo.classList.remove("negro");
         }
+    
 
         if(CostoTotal.classList.contains("total-dark")){
             CostoTotal.classList.remove("total-dark");
         }
+
+        const carritoVacio = document.querySelectorAll(".vacio");
+        carritoVacio.forEach(p => {
+            p.classList.remove("vacioN");
+        });
+
 
 
         const contenedorInd = document.querySelectorAll(".productosIndv");
@@ -305,6 +313,12 @@ function modonegro() {
         const contenedorInd = document.querySelectorAll(".productosIndv");
         contenedorInd.forEach(producto => {
             producto.classList.add("productosIndvDark");
+        });
+
+
+        const carritoVacio = document.querySelectorAll(".vacio");
+        carritoVacio.forEach(p => {
+            p.classList.add("vacioN");
         });
 
         titulo.classList.add("negro");
