@@ -10,19 +10,6 @@ const modonegroc=document.querySelector(".botondark");
 const eliminar=document.querySelector(".eliminar");
 const contador=document.querySelector("#totalProductos");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Carrito
 
 
@@ -75,7 +62,7 @@ function mostrarProductosEnCarrito() {
         `;
         listaCarrito.append(div);
         div.querySelector(".eliminar").addEventListener("click", () => {
-            EliminarDelCarrito(index); // Llamar la función con el índice
+            EliminarDelCarrito(index); 
         });
 
     });
@@ -139,9 +126,9 @@ function actualizarTotal(){
 
 
 function EliminarDelCarrito(index) {
-    carrito.splice(index, 1); // Eliminar el producto del array
-    localStorage.setItem("carrito", JSON.stringify(carrito)); // Actualizar localStorage
-    mostrarProductosEnCarrito(); // Actualizar la visualización del carrito
+    carrito.splice(index, 1); 
+    localStorage.setItem("carrito", JSON.stringify(carrito)); 
+    mostrarProductosEnCarrito(); 
     actualizarTotal();
 }
 
@@ -203,18 +190,6 @@ function mostrarCH(dolar) {
 }
 
 
-{/* <div class="card modo-dark-card" style="width: 18rem;">
-<img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
-<div class="card-body">
-  <h5 class="card-title">${producto.nombre}</h5>
-  <p class="card-text">${producto.descripcion}</p>
-  <p class="producto-precio">${producto.precio}</p>
-  <button class="agregar-productos" id="${producto.id}">Comprar</button>
-</div> */}
-
-
-
-// MODO NEGRO
 
 
 modonegroc.addEventListener("click", modonegro );
