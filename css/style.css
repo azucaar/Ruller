@@ -164,6 +164,9 @@ background-color: black;
     align-items: center; 
     justify-content: flex-start; 
     border: solid rgba(54, 54, 54, 0.068) 1px;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 60%;
 
 }
 
@@ -194,14 +197,14 @@ background-color: black;
   .productosIndv {
     display: flex; 
     align-items: center; 
-    justify-content: space-between; 
+    justify-content: space-around; 
     padding: 10px;
     margin: 10px 0; 
     background: #fcfbfbd3;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(19, 18, 18, 0.418);
     color: rgb(2, 2, 2);
-    width: 10%;
+    width: 100%;
     
     
 
@@ -214,6 +217,7 @@ background-color: black;
     align-items: center;
     justify-content: space-around; 
     padding: 10px;
+    margin: 10px 0; 
     box-sizing: border-box;
     background: #313131d3;
     border-radius: 5px;
@@ -223,6 +227,12 @@ background-color: black;
   }
 
   .productosIndv img {
+    width: 100px; 
+    height: auto;  
+
+}
+
+.productosIndvDark img {
     width: 100px; 
     height: auto;  
 
