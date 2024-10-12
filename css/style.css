@@ -164,10 +164,10 @@ background-color: black;
     align-items: center; 
     justify-content: flex-start; 
     border: solid rgba(54, 54, 54, 0.068) 1px;
+
 }
 
 .carritodark{
-    width: 100%; 
     display: flex; 
     flex-direction: column; 
     background: #0c0c0c;
@@ -176,26 +176,33 @@ background-color: black;
     align-items: center; 
     justify-content: flex-start; 
     border: solid rgba(202, 202, 202, 0.164) 1px;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 60%;
 }
 
 .carrito .productos {
     display: block;
     flex-direction: column;
+    align-items: center;
+    width: 100%;
+    
   }
 
 
 
   .productosIndv {
-    margin: 10px;
     display: flex; 
-    align-items: center;
+    align-items: center; 
     justify-content: space-between; 
     padding: 10px;
-    box-sizing: border-box;
+    margin: 10px 0; 
     background: #fcfbfbd3;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(19, 18, 18, 0.418);
     color: rgb(2, 2, 2);
+    width: 10%;
+    
     
 
   }
@@ -205,17 +212,29 @@ background-color: black;
     margin: 10px;
     display: flex; 
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-around; 
     padding: 10px;
     box-sizing: border-box;
     background: #313131d3;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(78, 77, 77, 0.897);
     color: rgb(255, 255, 255);
+    width: 100%;
   }
 
+  .productosIndv img {
+    width: 100px; 
+    height: auto;  
+
+}
+
+
+
+
+
+
+
 .productos{
-    width: 100%; 
     display: flex;
     flex-direction: column; 
     gap: 10px; 
@@ -229,15 +248,13 @@ background-color: black;
 
 
 .eliminar {
-    margin-left: auto;
-    cursor: pointer;
+    display: flex;  
+    align-items: center;  
+    cursor: pointer; 
   }
 
 
-  .titulos {
-    flex-grow: 0.4;
-    margin-right: 50px; 
-}
+
 
 
 .cantidad {
@@ -247,9 +264,12 @@ background-color: black;
 
 
 .titulos h3, .titulos p {
-    margin: 0px;
-    padding: 0;
-    line-height: 1.5;
+width: 100px;
+}
+
+
+ .cantidad{
+    width: 100px;
 }
 
 .productos{
